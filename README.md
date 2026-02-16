@@ -90,15 +90,23 @@ Snapshots:
 
 ##Challenges & Solutions
 
-    Problema: 
-    Solución: 
+    Problema: La Spot Light 2D no apuntaba correctamente según la dirección del jugador, generando inconsistencias visuales.
+    Solución: Se implementó un FlashLightController independiente que ajusta la rotación de la luz en función del vector de movimiento.
+    Resultado: Comportamiento coherente de la iluminación. 
 
-    Problema: 
-    Solución: 
-    Resultado: 
+    Problema: La lógica de interacción estaba inicialmente integrada en el controlador del jugador.
+    Solución: Se implementó la interfaz IInteractable, permitiendo que cada objeto gestione su propia lógica de interacción.
+    Resultado: Arquitectura modular y escalable, facilitando la extensión del sistema.
+
+    Problema: El cambio inmediato de escena resultaba en una transición brusca.
+    Solución: Se agrego un retraso controlado antes de la transición final.
+    Resultado: Mejora la experiencia de usuario.
 
 ## Learnings
-
+    Comunicación entre sistemas mediante eventos.
+    Aplicación del patrón Singleton.
+    Comunicación y uso de URP 2D Renderer.
+    Separación de responsabilidades entre controladores.
     
 
 
